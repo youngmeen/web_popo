@@ -36,4 +36,16 @@ public class BoardMapperTests {
 		
 		log.info(boardvo);
 	}
+	@Test
+	public void testRead() {
+		
+		BoardVO boardvo = mapper.read(5L);
+		
+		log.info(boardvo);
+		
+	}
+	@Test
+	public void testDelete() {
+		log.info("DELETE COUNT: " + mapper.delete(3L));
+	}
 }
